@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">285745027548-79np73im27l00ju317eubefe5e68t127.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://chatroom-eb2b7.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">285745027548</string>
+    <string name="google_api_key" translatable="false">AIzaSyCLzRGtlS00GwcC8WHk4wGh4miV0u4dh3Q</string>
+    <string name="google_app_id" translatable="false">1:285745027548:android:9a597395706012fd</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCLzRGtlS00GwcC8WHk4wGh4miV0u4dh3Q</string>
+    <string name="google_storage_bucket" translatable="false">chatroom-eb2b7.appspot.com</string>
+    <string name="project_id" translatable="false">chatroom-eb2b7</string>
+</resources>

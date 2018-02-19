@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chatroom.activity.ChatActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/back_btn"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_arrow_back"
+                tools:ignore="ContentDescription" />
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/back_btn">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_profile_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/user_profile_image"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/reyclerview_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/action_bar" />
+
+
+    <!-- A horizontal line between the chatbox and RecyclerView -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/layout_chatbox"
+        android:background="#dfdfdf" />
+
+    <LinearLayout
+        android:id="@+id/layout_chatbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:minHeight="48dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/new_msg_ET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Start Typing..."
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="6"
+            tools:ignore="HardcodedText" />
+
+        <ImageButton
+            android:id="@+id/attach_file_btn"
+            android:layout_width="50dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_attach_file"
+            tools:ignore="ContentDescription" />
+
+        <ImageButton
+            android:id="@+id/send_msg_btn"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:src="@drawable/ic_send_gray"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+</RelativeLayout>
